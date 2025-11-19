@@ -1,0 +1,112 @@
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; font-family: Arial, Helvetica, sans-serif; background: #f7f8fb; color: #222; }
+
+/* Page wrapper */
+#page-wrap { width: 94%; max-width: 1100px; margin: 18px auto; }
+
+/* Banner (top area) */
+#banner {
+  background: linear-gradient(90deg, #2c3e50, #4b79a1);
+  color: white;
+  padding: 18px;
+  border-radius: 8px;
+  display: block;
+  overflow: hidden;
+}
+#name-block { float: left; width: 68%; }
+#name-block h1 { font-size: 28px; margin-bottom: 6px; letter-spacing: 0.5px; }
+.subtitle { opacity: 0.95; margin-top: 6px; font-size: 14px; }
+
+/* CTA on the right */
+#cta { float: right; width: 30%; text-align: right; padding-top: 8px; }
+.button {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #ffd166;
+  color: #082032;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-left: 6px;
+}
+.button.ghost { background: transparent; border: 1px solid rgba(255,255,255,0.35); color: white; padding: 6px 10px; }
+
+/* Clear floats after banner */
+#banner:after { content: ""; display: block; clear: both; }
+
+/* Navigation */
+#nav { margin-top: 12px; background: white; border-radius: 6px; border: 1px solid #e3e6ee; }
+#nav ul { list-style: none; overflow: hidden; }
+#nav li { display: inline-block; }
+#nav a {
+  display: inline-block;
+  padding: 10px 14px;
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: bold;
+  border-right: 1px solid #eef2f6;
+}
+#nav a:hover { background: #f1f5f9; }
+
+/* Content layout */
+#content { margin-top: 14px; display: block; overflow: hidden; }
+
+/* Main column */
+#main { float: left; width: 68%; }
+
+/* Side column */
+#side { float: right; width: 30%; }
+
+/* Card style */
+.card {
+  background: white;
+  border-radius: 6px;
+  padding: 14px;
+  margin-bottom: 12px;
+  border: 1px solid #eceff4;
+  box-shadow: 0 1px 2px rgba(20,20,20,0.02);
+}
+.card h2 { margin-bottom: 8px; font-size: 18px; color: #133b5c; }
+
+/* Skill bars */
+.skill-row { margin-bottom: 12px; }
+.skill-title { font-weight: bold; margin-bottom: 6px; }
+.skill-bar { background: #eef3fa; border-radius: 999px; height: 18px; overflow: hidden; }
+.skill-fill {
+  display: block;
+  height: 18px;
+  line-height: 18px;
+  text-align: right;
+  padding-right: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  background: linear-gradient(90deg,#3b82f6,#60a5fa);
+  color: white;
+  border-radius: 999px;
+}
+
+/* Project entries */
+.project { margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px dashed #efefef; }
+.project h3 { font-size: 15px; margin-bottom: 4px; }
+.project-links a { text-decoration: none; color: #1a73e8; font-weight: bold; }
+
+/* Contact card small text */
+.small { font-size: 12px; color: #666; margin-top: 8px; }
+
+/* Footer */
+#footer { margin-top: 18px; text-align: center; color: #6b7280; font-size: 13px; padding: 10px 0; }
+
+/* Responsive behaviour: simple */
+@media screen and (max-width: 800px) {
+  #main, #side { float: none; width: 100%; }
+  #cta { text-align: left; margin-top: 10px; width: 100%; }
+  #name-block { width: 100%; float: none; }
+  #banner { padding: 14px; }
+}
+
+/* Small tweaks for printing */
+@media print {
+  #nav, #cta, .button { display: none; }
+  #page-wrap { width: 100%; margin: 0; }
+}
